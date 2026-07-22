@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "savearchitect"
+version = "0.1.0"
+description = "Evidence-driven game save ingestion and analysis"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+rar = ["rarfile>=4.2"]
+
+[project.scripts]
+savearchitect = "savearchitect.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
